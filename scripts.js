@@ -14,6 +14,13 @@ const uploadFile = (imageTag) => {
     reader.readAsDataURL(file)
 }
 
+const copyData = () => {
+    let copyText = encodedResult
+    copyText.select()
+    copyText.setSelectionRange(0,9999999999)
+    document.execCommand('copy')
+}
+
 btnEncode.onclick = () => {
     encodedResult.value = encodedData
 }

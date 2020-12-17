@@ -10,31 +10,39 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <h1 style="text-align:center;">
+                <b><i>Image-Encoder-Decoder</i></b>
+            </h1>
+        </div>
         <div class="row justify-content-center">
-            <div class="col-5 m-2">
+            <div class="col-12 col-sm-5 m-2">
                 <div class="row">
                     <h2 class="col-12 mt-5"><b><u>Image to Base64</u></b></h2>
                 </div>
                 <div class="row"> 
-                    <input type="file" class="col-12 m-3" id="imageFile" onchange="uploadFile(this)">     
-                    <button class="col-12 m-3 btn btn-primary btn-block" id="btnEncode">Encode</button>
+                    <input type="file" class="col-12 m-3" id="imageFile" onchange="uploadFile(this)"
+                    accept="image/png, image/jpeg">     
+                    <button class="col-12 m-3 btn btn-success btn-block" id="btnEncode">Encode</button>
                 </div>
                 <div class="row">
-                    <textarea class="col-12 m-3" id="encodedResult" cols="30" rows="10" readonly></textarea>
+                    <input class="col-12 m-3 mb-0" id="encodedResult" readonly>
+                    <br>
+                    <button type="button" class="btn btn-outline-dark btn-sm m-3 mt-0" onclick="copyData()">Copy</button>
                 </div>
             </div>
-            <div class="col-5 m-2">
+            <div class="col-12 col-sm-5 m-2">
                 <div class="row">
                     <h2 class="col-12 mt-5"><b><u>Base64 to Image</u></b></h2>
                 </div>
                 <div class="row">
-                    <textarea class="col-12 m-3" cols="30" rows="6" id="encodedQuery"></textarea>
+                    <input class="col-12 m-3" id="encodedQuery">
                 </div>
                 <div class="row">     
-                    <button class="col-12 m-3 btn btn-primary btn-block" id="btnDecode">Decode</button>
+                    <button class="col-12 m-3 btn btn-success btn-block" id="btnDecode">Decode</button>
                 </div>
                 <div class="row">
-                    <img class="col-12" alt="Image" id="decodedImage">
+                    <img class="col-12 m-3" alt="Image" id="decodedImage">
                 </div>
             </div>
         </div>
